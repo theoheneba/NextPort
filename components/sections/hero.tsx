@@ -1,6 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight, Github, Linkedin, Twitter } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/lib/constants/content";
@@ -8,18 +10,16 @@ import { siteConfig } from "@/lib/constants/content";
 export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center bg-gradient-to-b from-background to-accent">
-      {/* Background Pattern */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute w-full h-full opacity-30 bg-[radial-gradient(circle_500px_at_50%_200px,#3B82F6,transparent)]" />
       </div>
 
       <div className="container px-4 mx-auto relative">
-        <div className="max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-center md:text-left"
           >
             <motion.div
               initial={{ opacity: 0 }}
@@ -49,7 +49,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
-              className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-12"
+              className="text-lg md:text-xl text-muted-foreground mb-12"
             >
               {siteConfig.description}
             </motion.p>
@@ -57,21 +57,25 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="flex flex-col md:flex-row gap-4 justify-center md:justify-start"
+              className="flex flex-col sm:flex-row gap-4"
             >
-              <Button size="lg" className="group">
-                View Projects
-                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button variant="outline" size="lg">
-                Contact Me
-              </Button>
+              <Link href="/projects">
+                <Button size="lg" className="group w-full sm:w-auto">
+                  View Projects
+                  <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
+              <Link href="#contact">
+                <Button variant="outline" size="lg" className="w-full sm:w-auto">
+                  Contact Me
+                </Button>
+              </Link>
             </motion.div>
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.7 }}
-              className="flex justify-center md:justify-start gap-6 mt-12"
+              className="flex gap-6 mt-12"
             >
               <a
                 href={siteConfig.github}
@@ -98,6 +102,24 @@ export function Hero() {
                 <Twitter className="h-6 w-6" />
               </a>
             </motion.div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="relative hidden md:block"
+          >
+            <div className="relative w-full aspect-square rounded-full overflow-hidden shadow-xl ring-2 ring-primary/10">
+              <Image
+                src={siteConfig.heroImage}
+                alt="Hero Image"
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-500"
+                priority
+              />
+            </div>
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-600 to-primary opacity-20 blur-2xl" />
           </motion.div>
         </div>
       </div>

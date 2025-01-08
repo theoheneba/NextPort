@@ -8,13 +8,13 @@ export const siteConfig = {
   github: "https://github.com",
   linkedin: "https://linkedin.com",
   twitter: "https://twitter.com",
+  heroImage: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&q=80",
 };
 
 export const navLinks = [
   { href: "/", label: "Home" },
-  { href: "#projects", label: "Projects" },
-  { href: "#experience", label: "Experience" },
-  { href: "#blog", label: "Blog" },
+  { href: "/projects", label: "Projects" },
+  { href: "/blog", label: "Blog" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -25,6 +25,39 @@ export const skills = [
   { name: "UI/UX Design", level: 80 },
   { name: "Python", level: 75 },
   { name: "DevOps", level: 70 },
+];
+
+export const experience = [
+  {
+    role: "Senior Full Stack Developer",
+    company: "Tech Solutions Inc",
+    period: "2022 - Present",
+    achievements: [
+      "Led development of microservices architecture",
+      "Improved system performance by 40%",
+      "Mentored junior developers",
+    ],
+  },
+  {
+    role: "Full Stack Developer",
+    company: "Digital Innovations",
+    period: "2020 - 2022",
+    achievements: [
+      "Built scalable web applications",
+      "Implemented CI/CD pipelines",
+      "Reduced deployment time by 60%",
+    ],
+  },
+  {
+    role: "Frontend Developer",
+    company: "Creative Web Agency",
+    period: "2018 - 2020",
+    achievements: [
+      "Developed responsive web interfaces",
+      "Optimized website performance",
+      "Collaborated with design team",
+    ],
+  },
 ];
 
 export const testimonials = [

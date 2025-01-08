@@ -5,7 +5,7 @@ import { skills } from "@/lib/constants/content";
 
 export function Skills() {
   return (
-    <section className="py-24 bg-muted/30">
+    <section className="py-24 bg-muted/30" id="skills">
       <div className="container px-4 mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -28,9 +28,12 @@ export function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
+              className="group"
             >
               <div className="mb-2 flex justify-between">
-                <span className="font-medium">{skill.name}</span>
+                <span className="font-medium group-hover:text-primary transition-colors">
+                  {skill.name}
+                </span>
                 <span className="text-muted-foreground">{skill.level}%</span>
               </div>
               <div className="h-2 bg-muted rounded-full overflow-hidden">

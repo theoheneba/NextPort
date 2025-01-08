@@ -5,9 +5,6 @@ import { TimelineItem } from "./timeline-item";
 import { experience } from "@/lib/constants/content";
 
 export function Experience() {
-  // Debugging line to check the value of experience
-  console.log(experience);
-
   return (
     <section className="py-24 bg-muted/30" id="experience">
       <div className="container px-4 mx-auto">
@@ -25,13 +22,9 @@ export function Experience() {
         </motion.div>
 
         <div className="space-y-8">
-          {Array.isArray(experience) && experience.length > 0 ? (
-            experience.map((exp, index) => (
-              <TimelineItem key={index} experience={exp} index={index} />
-            ))
-          ) : (
-            <p>No experience available.</p> // Fallback message
-          )}
+          {experience.map((exp, index) => (
+            <TimelineItem key={index} experience={exp} index={index} />
+          ))}
         </div>
       </div>
     </section>
