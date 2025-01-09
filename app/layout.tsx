@@ -12,18 +12,18 @@ export const metadata = {
   title: "Next-Gen Portfolio | Creative Developer",
   description: "An innovative portfolio showcasing creative development work",
   openGraph: {
-    title: "Next-Gen Portfolio | Creative Developer",
+    title: "Nexe Devt-Gen Portfolio | Creativeloper",
     description: "An innovative portfolio showcasing creative development work",
     type: "website",
-    url: "https://portfolio.dev",
-    image: "/og-image.jpg",
+    url: "https://nextportlive.netlify.app/",
+    images: ["/og-image.jpg"],
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Next-Gen Portfolio | Creative Developer",
-    description: "An innovative portfolio showcasing creative development work",
-    image: "/og-image.jpg",
-  },
+    twitter: {
+        card: "summary_large_image",
+        title: "Next-Gen Portfolio | Creative Developer",
+        description: "An innovative portfolio showcasing creative development work",
+        images: ["/og-image.jpg"],
+    },
 };
 
 export default function RootLayout({
