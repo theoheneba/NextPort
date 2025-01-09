@@ -12,7 +12,7 @@ export const metadata = {
   title: "Next-Gen Portfolio | Creative Developer",
   description: "An innovative portfolio showcasing creative development work",
   openGraph: {
-    title: "Nexe Devt-Gen Portfolio | Creativeloper",
+    title: "Next Devt-Gen Portfolio | Creativeloper",
     description: "An innovative portfolio showcasing creative development work",
     type: "website",
     url: "https://nextportlive.netlify.app/",
