@@ -1,14 +1,29 @@
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme/theme-provider";
-import { Navbar } from "@/components/layout/navbar";
-import { Footer } from "@/components/layout/footer";
+import { MouseTracker } from "@/components/mouse-tracker";
+import { Analytics } from "@/components/analytics";
+import { CustomCursor } from "@/components/custom-cursor";
+import { ParticleBackground } from "@/components/particle-background";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Modern Portfolio | Full Stack Developer",
-  description: "Professional portfolio website showcasing my work and skills",
+  title: "Next-Gen Portfolio | Creative Developer",
+  description: "An innovative portfolio showcasing creative development work",
+  openGraph: {
+    title: "Next-Gen Portfolio | Creative Developer",
+    description: "An innovative portfolio showcasing creative development work",
+    type: "website",
+    url: "https://portfolio.dev",
+    image: "/og-image.jpg",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Next-Gen Portfolio | Creative Developer",
+    description: "An innovative portfolio showcasing creative development work",
+    image: "/og-image.jpg",
+  },
 };
 
 export default function RootLayout({
@@ -25,9 +40,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Navbar />
+          <MouseTracker />
+          <CustomCursor />
+          <ParticleBackground />
           {children}
-          <Footer />
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>
