@@ -15,13 +15,13 @@ export function Experience() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl font-bold mb-4">Work Experience</h2>
+          <h2 className="text-3xl font-bold mb-4">Professional Journey</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            My professional journey and achievements
+            A timeline of my professional experience and key achievements
           </p>
         </motion.div>
 
-        <div className="space-y-8">
+        <div className="relative space-y-8">
           {experience.map((exp, index) => (
             <TimelineItem key={index} experience={exp} index={index} />
           ))}

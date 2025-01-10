@@ -22,9 +22,13 @@ export function Testimonials() {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <TestimonialCard key={index} testimonial={testimonial} index={index} />
-          ))}
+          {Array.isArray(testimonials) && testimonials.length > 0 ? (
+            testimonials.map((testimonial, index) => (
+              <TestimonialCard key={index} testimonial={testimonial} index={index} />
+            ))
+          ) : (
+            <p>No testimonials available.</p> // Optional: Display a message if there are no testimonials
+          )}
         </div>
       </div>
     </section>
