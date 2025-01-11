@@ -11,6 +11,57 @@ export const siteConfig = {
   heroImage: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&q=80",
 };
 
+export const testimonials = [
+  {
+    content: "John is an exceptional developer who consistently delivers high-quality solutions. His technical expertise and problem-solving skills are outstanding.",
+    name: "Sarah Johnson",
+    role: "CTO",
+    company: "TechCorp",
+    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80"
+  },
+  {
+    content: "Working with John was a game-changer for our project. His attention to detail and innovative approaches helped us achieve our goals ahead of schedule.",
+    name: "Michael Chen",
+    role: "Product Manager",
+    company: "InnovateLabs",
+    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80"
+  },
+  {
+    content: "An incredible talent who brings both technical excellence and creative thinking to every project. John's work has significantly improved our platform's performance.",
+    name: "Emily Rodriguez",
+    role: "Engineering Director",
+    company: "DataFlow Systems",
+    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80"
+  }
+];
+
+export const blogPosts = [
+  {
+    title: "Building Scalable Web Applications",
+    excerpt: "Learn the best practices for building scalable and maintainable web applications using modern technologies.",
+    date: "2024-03-15",
+    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=80",
+    tags: ["Web Development", "Architecture", "Performance"],
+    slug: "building-scalable-web-applications"
+  },
+  {
+    title: "The Future of Frontend Development",
+    excerpt: "Exploring upcoming trends and technologies that will shape the future of frontend development.",
+    date: "2024-03-10",
+    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80",
+    tags: ["Frontend", "Web Development", "Trends"],
+    slug: "future-of-frontend-development"
+  },
+  {
+    title: "Mastering TypeScript",
+    excerpt: "A comprehensive guide to mastering TypeScript and improving your code quality.",
+    date: "2024-03-05",
+    image: "https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=800&q=80",
+    tags: ["TypeScript", "Programming", "JavaScript"],
+    slug: "mastering-typescript"
+  }
+];
+
 export const navLinks = [
   { href: "/", label: "Home" },
   { href: "/projects", label: "Projects" },
@@ -86,5 +137,3 @@ export const experience = [
     technologies: ["React", "JavaScript", "SASS", "WordPress", "GraphQL"]
   },
 ];
-
-// Rest of the content remains the same...

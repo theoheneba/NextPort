@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { BlogCard } from "./blog-card";
-import { blogPosts } from "@/lib/constants/content"; // Ensure this is correctly imported
+import { blogPosts } from "@/lib/constants/content";
 
 export function Blog() {
   return (
@@ -22,13 +22,9 @@ export function Blog() {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {Array.isArray(blogPosts) && blogPosts.length > 0 ? (
-            blogPosts.map((post, index) => (
-              <BlogCard key={index} post={post} index={index} />
-            ))
-          ) : (
-            <p>No blog posts available.</p> // Optional: Display a message if there are no blog posts
-          )}
+          {blogPosts.map((post, index) => (
+            <BlogCard key={index} post={post} index={index} />
+          ))}
         </div>
       </div>
     </section>
