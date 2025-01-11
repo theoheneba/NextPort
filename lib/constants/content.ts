@@ -6,7 +6,7 @@ export const siteConfig = {
   phone: "+1 (555) 123-4567",
   location: "San Francisco, CA",
   github: "https://github.com/theoheneba",
-  linkedin: "https://linkedin.com",
+  linkedin: "https://linkedin.com/in/ohenebakumi",
   twitter: "https://twitter.com",
   heroImage: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&q=80",
 };
